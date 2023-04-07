@@ -6,9 +6,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: #def0f370;
+}
+
 .App {
   width: 480px;
-  height: 800px;
+  height: 750px;
   margin: 2rem auto;
   background-image: url('img/app.jpg');
   background-repeat: no-repeat;
@@ -42,7 +46,7 @@
   transition: 0.2 ease;
 }
 
-.App.wysi {
+.App.wysi { /*Ignore this it's meme*/
   background-image: linear-gradient(to bottom,
     rgba(19, 89, 187, 0.52),
     rgba(0,0,0,0.75)),
@@ -71,7 +75,7 @@ main {
   outline: none;
   border: none;
   appearance: none;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 }
 
@@ -85,7 +89,7 @@ main {
 
 .location-container {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 }
@@ -105,7 +109,7 @@ main {
   display: inline-block;
   margin: 30px auto;
   padding: 15px 25px;
-  font-size: 100px;
+  font-size: 90px;
   font-weight: bold;
   border:2px solid white;
   border-radius: 5px;

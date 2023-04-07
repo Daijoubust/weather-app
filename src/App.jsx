@@ -20,7 +20,9 @@ function App() {
 
       const API_KEY ="b27b39ae23a8741036216125f9f34391"
       const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
-    
+  //       const API_URLPM = `
+  // http://api.openweathermap.org/data/2.5/air_pollution?&appid=${API_KEY}
+  // `
 
       const response = await axios.get(API_URL);
       const tempCelsius = convertKelvinToCelsius(response.data.main.temp);
@@ -29,6 +31,7 @@ function App() {
         pressure: response.data.main.pressure,
         humidity: response.data.main.humidity,
         windSpeed: response.data.wind.speed,
+        description: response.data.weather.description,
       });
       setDate(new Date().toLocaleDateString());
     } catch (error) {
@@ -41,7 +44,11 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={ typeof weather.temperature != "undefined"
+    ? weather.temperature > 25
+    ? "App hot"
+    : "App cold"
+    : "App"}>
       <main>
         <div className="search-container">
           <form onSubmit={getWeather}>
@@ -68,6 +75,7 @@ function App() {
               <p>Pressure: {weather.pressure} hPa</p>
               <p>Humidity: {weather.humidity}%</p>
               <p>Wind Speed: {weather.windSpeed} m/s</p>
+              <p>{weather.description}</p>
               <p style={getStyle(getWeatherDescription(weather.temperature))}>{getWeatherDescription(weather.temperature)}</p>
               </div>
             </div>
