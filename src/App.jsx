@@ -53,7 +53,15 @@ function App() {
 
   return (
     <div>
-      <div className={cityNotFound ? "App" : typeof weather.temperature !== "undefined" ? (weather.temperature > 25 ? "App hot" : (weather.temperature <= 0 ? "App Freeze" : "App cold")) : "App"}>
+      <div className={cityNotFound
+      ? "App"
+      : typeof weather.temperature !== "undefined"
+        ? (weather.temperature > 25
+      ? "App hot"
+      : (weather.temperature >= 0 && weather.temperature <= 25
+      ? "App cold"
+      : "App Freeze"))
+      : "App"}>
         <main>
           <div className="search-container">
             <form onSubmit={getWeather}>
