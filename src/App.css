@@ -11,15 +11,19 @@ body {
 }
 
 .App {
-  width: 480px;
-  height: 750px;
-  margin: 2rem auto;
+  width: 30rem;
+  height: 40.625rem;
+  margin: 1.5rem auto;
   background-image: url('img/app.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.2s ease;
   border-radius: 10px;
   box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
 }
 
 .App:hover {
@@ -27,23 +31,36 @@ body {
 }
 
 .App.hot {
-  background-image: linear-gradient(to bottom,
-    rgba(255,167,16,0.52),
-    rgba(0,0,0,0.75)),
-    url('img/hot.jpg');
+  background-image: linear-gradient(to bottom,    rgba(255,167,16,0.30),    rgba(0,0,0,0.75)),    url('img/hot.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.2 ease;
+  -webkit-transition: 0.2 ease;
+  -moz-transition: 0.2 ease;
+  -ms-transition: 0.2 ease;
+  -o-transition: 0.2 ease;
 }
 
 .App.cold {
-  background-image: linear-gradient(to bottom,
-    rgba(19, 162, 187, 0.52),
-    rgba(0,0,0,0.75)),
-    url('img/cold.jpg');
+  background-image: linear-gradient(to bottom,rgba(19, 162, 187, 0.30),    rgba(0,0,0,0.75)),    url('img/cold.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.2 ease;
+  -webkit-transition: 0.2 ease;
+  -moz-transition: 0.2 ease;
+  -ms-transition: 0.2 ease;
+  -o-transition: 0.2 ease;
+}
+
+.App.freeze {
+  background-image: linear-gradient(to bottom, rgba(4, 107, 162, 0.30), rgba(0,0,0,0.75)),url('img/freeze.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2 ease;
+  -webkit-transition: 0.2 ease;
+  -moz-transition: 0.2 ease;
+  -ms-transition: 0.2 ease;
+  -o-transition: 0.2 ease;
 }
 
 .App.wysi { /*Ignore this it's meme*/
@@ -58,25 +75,29 @@ body {
 
 main {
   min-height: 100vh;
-  padding: 25px;
+  padding: 1.625rem;
 }
 
 .search-container {
   width: 100%;
-  margin: 0 0 75px;
+  margin: 0 0 2rem;
 }
 
 .search-bar {
   color: black;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   width: 100%;
-  padding: 15px;
+  padding: 1rem;
   outline: none;
   border: none;
   appearance: none;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
 }
 
 .search-container .search-bar:focus {
@@ -89,7 +110,7 @@ main {
 
 .location-container {
   color: white;
-  font-size: 25px;
+  font-size: 1.625rem;
   text-align: center;
   text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 }
@@ -107,19 +128,23 @@ main {
   color: white;
   position: relative;
   display: inline-block;
-  margin: 30px auto;
-  padding: 15px 25px;
+  margin: 1.25rem auto;
+  padding: 1rem 1.5rem;
   font-size: 90px;
   font-weight: bold;
   border:2px solid white;
-  border-radius: 5px;
+  border-radius: 0.375rem;
   box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
   text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  -webkit-border-radius: 0.375rem;
+  -moz-border-radius: 0.375rem;
+  -ms-border-radius: 0.375rem;
+  -o-border-radius: 0.375rem;
 }
 
 .weather-container .weather {
   color: #fff;
-  font-size: 30px;
+  font-size: 1.75rem;
   font-weight: bold;
   text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 }
